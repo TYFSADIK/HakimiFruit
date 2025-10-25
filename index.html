@@ -3,8 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hakimi Fresh | Wholesale Fresh Fruits & Vegetables in Toronto</title>
-    <meta name="description" content="Premium wholesale fresh fruits and vegetables in Toronto. Supplying stores, restaurants, and cafés with fast daily delivery.">
+    <title>Hakimi Fresh Produce | Premium Wholesale Fruits & Vegetables in Toronto</title>
+    <meta name="description" content="Hakimi Fresh Produce offers premium wholesale fresh fruits and vegetables in Toronto. We supply stores, restaurants, and cafés with fast daily delivery.">
+    <meta name="keywords" content="fresh produce, wholesale fruits, wholesale vegetables, Toronto, restaurant supply, fresh delivery, organic produce">
+    <meta name="author" content="Hakimi Fresh Produce">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hakimiproduce.com/">
+    <meta property="og:title" content="Hakimi Fresh Produce | Premium Wholesale Fruits & Vegetables">
+    <meta property="og:description" content="Premium wholesale fresh fruits and vegetables in Toronto. Supplying stores, restaurants, and cafés with fast daily delivery.">
+    <meta property="og:image" content="https://hakimiproduce.com/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://hakimiproduce.com/">
+    <meta property="twitter:title" content="Hakimi Fresh Produce | Premium Wholesale Fruits & Vegetables">
+    <meta property="twitter:description" content="Premium wholesale fresh fruits and vegetables in Toronto. Supplying stores, restaurants, and cafés with fast daily delivery.">
+    <meta property="twitter:image" content="https://hakimiproduce.com/images/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         /* Base Styles */
@@ -600,6 +620,271 @@
 
         .product-card:hover .product-image img {
             transform: scale(1.05);
+        }
+
+        /* Weekly Boxes Section */
+        .weekly-boxes {
+            padding: 80px 0;
+            background: var(--neutral-light);
+        }
+        
+        body.dark .weekly-boxes {
+            background: var(--neutral-dark);
+        }
+        
+        .boxes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .box-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        body.dark .box-card {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .box-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(46, 125, 50, 0.15);
+        }
+        
+        .box-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--accent-orange);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+        
+        .box-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .box-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .box-card:hover .box-image img {
+            transform: scale(1.05);
+        }
+        
+        .box-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .box-header {
+            margin-bottom: 15px;
+        }
+        
+        .box-header h3 {
+            color: var(--primary-green);
+            margin-bottom: 5px;
+            font-size: 1.4rem;
+        }
+        
+        .box-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 10px;
+        }
+        
+        .box-description {
+            color: var(--muted-light);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        
+        body.dark .box-description {
+            color: var(--muted-dark);
+        }
+        
+        .box-items {
+            margin-bottom: 20px;
+        }
+        
+        .box-items h4 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: var(--primary-green);
+        }
+        
+        .items-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+            font-size: 0.85rem;
+        }
+        
+        .item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .item i {
+            color: var(--primary-green);
+            font-size: 0.7rem;
+        }
+        
+        .box-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: auto;
+        }
+        
+        .box-actions .btn {
+            flex: 1;
+            text-align: center;
+            padding: 10px 15px;
+            font-size: 0.9rem;
+        }
+
+        /* Bundle Options Section */
+        .bundle-options {
+            padding: 80px 0;
+            background: var(--glass-bg-light);
+            backdrop-filter: blur(var(--glass-blur));
+        }
+        
+        body.dark .bundle-options {
+            background: var(--glass-bg-dark);
+        }
+        
+        .bundles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .bundle-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            position: relative;
+        }
+        
+        body.dark .bundle-card {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .bundle-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(46, 125, 50, 0.15);
+        }
+        
+        .bundle-badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--primary-green), var(--primary-green-light));
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(46, 125, 50, 0.3);
+        }
+        
+        .bundle-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--primary-green), var(--primary-green-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 1.8rem;
+        }
+        
+        .bundle-card h3 {
+            color: var(--primary-green);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .bundle-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 15px;
+        }
+        
+        .bundle-price span {
+            font-size: 1rem;
+            color: var(--muted-light);
+            font-weight: normal;
+        }
+        
+        body.dark .bundle-price span {
+            color: var(--muted-dark);
+        }
+        
+        .bundle-description {
+            color: var(--muted-light);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        
+        body.dark .bundle-description {
+            color: var(--muted-dark);
+        }
+        
+        .bundle-features {
+            margin-bottom: 25px;
+        }
+        
+        .bundle-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .bundle-feature i {
+            color: var(--primary-green);
+            font-size: 0.9rem;
+        }
+        
+        .bundle-actions {
+            margin-top: auto;
+        }
+        
+        .bundle-actions .btn {
+            width: 100%;
+            text-align: center;
         }
 
         /* Gallery Section */
@@ -1284,6 +1569,19 @@
                 gap: 20px;
             }
             
+            .boxes-grid, .bundles-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .items-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .box-actions {
+                flex-direction: column;
+            }
+            
             .gallery-grid {
                 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
                 gap: 15px;
@@ -1411,7 +1709,7 @@
                 <i class="fas fa-leaf" style="color: var(--primary-green); font-size: 1.5rem;"></i>
             </div>
             <div class="logo-text">
-                <div class="company-name">Hakimi Fresh</div>
+                <div class="company-name">Hakimi Fresh Produce</div>
                 <div class="tagline">Fresh • Quality • Delivery</div>
             </div>
         </div>
@@ -1420,6 +1718,8 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#products">Products</a></li>
+                <li><a href="#weekly-boxes">Weekly Boxes</a></li>
+                <li><a href="#bundle-options">Bundles</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -1446,6 +1746,8 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#products">Products</a></li>
+        <li><a href="#weekly-boxes">Weekly Boxes</a></li>
+        <li><a href="#bundle-options">Bundles</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -1458,7 +1760,7 @@
     <div class="hero-bg"></div>
     <div class="container hero-content">
         <div class="hero-text">
-            <div class="welcome">WELCOME TO HAKIMI FRESH</div>
+            <div class="welcome">WELCOME TO HAKIMI FRESH PRODUCE</div>
             <h1>Premium Fresh Fruits & Vegetables in Toronto</h1>
             <p>Supplying stores, restaurants, and cafés with the highest quality produce. Fast daily delivery across Toronto.</p>
             <div class="hero-actions">
@@ -1503,13 +1805,13 @@
 <section id="about">
     <div class="container">
         <div class="section-header">
-            <h2>About Hakimi Fresh</h2>
+            <h2>About Hakimi Fresh Produce</h2>
             <p>Your trusted partner for premium fresh produce in Toronto</p>
         </div>
         <div class="about-content">
             <div class="about-text">
                 <h3>Quality Produce Since Day One</h3>
-                <p>At Hakimi Fresh, we're dedicated to providing the highest quality fresh fruits and vegetables to Toronto's food industry. With years of experience in the wholesale market, we understand the needs of restaurants, cafés, and stores that demand the freshest ingredients.</p>
+                <p>At Hakimi Fresh Produce, we're dedicated to providing the highest quality fresh fruits and vegetables to Toronto's food industry. With years of experience in the wholesale market, we understand the needs of restaurants, cafés, and stores that demand the freshest ingredients.</p>
                 <p>Our commitment to quality means we source directly from trusted growers and deliver daily to ensure your produce arrives at peak freshness. Whether you need conventional or organic options, we've got you covered.</p>
                 <div class="about-features">
                     <div class="feature">
@@ -1532,7 +1834,7 @@
                 <a class="btn btn-primary" href="#contact">Schedule Delivery</a>
             </div>
             <div class="about-image">
-                <img alt="Fresh vegetables at Hakimi Fresh" src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"/>
+                <img alt="Fresh vegetables at Hakimi Fresh Produce" src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"/>
             </div>
         </div>
     </div>
@@ -1573,7 +1875,7 @@
                 <h3>Organic Fruits</h3>
                 <p>Certified organic fruits grown without synthetic pesticides or fertilizers. For health-conscious customers and businesses.</p>
                 <div class="product-image">
-                    <img alt="Organic Fruits" src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"/>
+                    <img alt="Organic Fruits" src="https://images.unsplash.com/photo-1574856344991-aaa31b6f4ce3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"/>
                 </div>
             </div>
             <div class="product-card">
@@ -1584,6 +1886,186 @@
                 <p>Premium organic vegetables for health-conscious customers and businesses. All our organic produce is certified and traceable.</p>
                 <div class="product-image">
                     <img alt="Organic Vegetables" src="https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Weekly Boxes Section -->
+<section class="weekly-boxes" id="weekly-boxes">
+    <div class="container">
+        <div class="section-header">
+            <h2>Weekly Fresh Boxes</h2>
+            <p>Curated selections of the freshest seasonal produce delivered to your door</p>
+        </div>
+        <div class="boxes-grid">
+            <!-- Fruit Box -->
+            <div class="box-card">
+                <div class="box-image">
+                    <span class="box-badge">Most Popular</span>
+                    <img alt="Fresh Fruit Box" src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+                </div>
+                <div class="box-content">
+                    <div class="box-header">
+                        <h3>Fresh Fruit Box</h3>
+                        <div class="box-price">$24.99</div>
+                    </div>
+                    <p class="box-description">A delightful assortment of seasonal fruits perfect for snacking, desserts, or adding to your breakfast.</p>
+                    <div class="box-items">
+                        <h4>This Week's Selection:</h4>
+                        <div class="items-list">
+                            <div class="item"><i class="fas fa-check"></i> Red "Chelan" Cherries</div>
+                            <div class="item"><i class="fas fa-check"></i> Peach Pie Donut Peaches</div>
+                            <div class="item"><i class="fas fa-check"></i> White Peaches</div>
+                            <div class="item"><i class="fas fa-check"></i> Yellow Nectarines</div>
+                            <div class="item"><i class="fas fa-check"></i> California Grapes</div>
+                            <div class="item"><i class="fas fa-check"></i> Apples</div>
+                            <div class="item"><i class="fas fa-check"></i> Golden Kiwi</div>
+                            <div class="item"><i class="fas fa-check"></i> Specialty Melon</div>
+                            <div class="item"><i class="fas fa-check"></i> Mango</div>
+                            <div class="item"><i class="fas fa-check"></i> Bananas</div>
+                        </div>
+                    </div>
+                    <div class="box-actions">
+                        <a class="btn btn-primary" href="#contact">Order Now</a>
+                        <a class="btn btn-secondary" href="#contact">Customize</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Half & Half Box -->
+            <div class="box-card">
+                <div class="box-image">
+                    <img alt="Half & Half Box" src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+                </div>
+                <div class="box-content">
+                    <div class="box-header">
+                        <h3>Half & Half Box</h3>
+                        <div class="box-price">$29.99</div>
+                    </div>
+                    <p class="box-description">The perfect balance of fruits and vegetables for versatile meal preparation throughout the week.</p>
+                    <div class="box-items">
+                        <h4>This Week's Selection:</h4>
+                        <div class="items-list">
+                            <div class="item"><i class="fas fa-check"></i> California Grapes</div>
+                            <div class="item"><i class="fas fa-check"></i> Peach Pie Donut Peaches</div>
+                            <div class="item"><i class="fas fa-check"></i> White Peaches</div>
+                            <div class="item"><i class="fas fa-check"></i> Yellow Nectarines</div>
+                            <div class="item"><i class="fas fa-check"></i> Golden Kiwi</div>
+                            <div class="item"><i class="fas fa-check"></i> Kale</div>
+                            <div class="item"><i class="fas fa-check"></i> Broccoli</div>
+                            <div class="item"><i class="fas fa-check"></i> Cremini Mushrooms</div>
+                            <div class="item"><i class="fas fa-check"></i> Cucumbers</div>
+                            <div class="item"><i class="fas fa-check"></i> Tomatoes</div>
+                        </div>
+                    </div>
+                    <div class="box-actions">
+                        <a class="btn btn-primary" href="#contact">Order Now</a>
+                        <a class="btn btn-secondary" href="#contact">Customize</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Vegetable Box -->
+            <div class="box-card">
+                <div class="box-image">
+                    <img alt="Fresh Vegetable Box" src="https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+                </div>
+                <div class="box-content">
+                    <div class="box-header">
+                        <h3>Fresh Vegetable Box</h3>
+                        <div class="box-price">$22.99</div>
+                    </div>
+                    <p class="box-description">A nutrient-packed selection of fresh vegetables for healthy cooking and vibrant meals.</p>
+                    <div class="box-items">
+                        <h4>This Week's Selection:</h4>
+                        <div class="items-list">
+                            <div class="item"><i class="fas fa-check"></i> Kale</div>
+                            <div class="item"><i class="fas fa-check"></i> Romaine Hearts</div>
+                            <div class="item"><i class="fas fa-check"></i> Broccoli</div>
+                            <div class="item"><i class="fas fa-check"></i> Cremini Mushrooms</div>
+                            <div class="item"><i class="fas fa-check"></i> Spanish Onion</div>
+                            <div class="item"><i class="fas fa-check"></i> Cucumbers</div>
+                            <div class="item"><i class="fas fa-check"></i> Tomatoes</div>
+                            <div class="item"><i class="fas fa-check"></i> Avocado</div>
+                            <div class="item"><i class="fas fa-check"></i> Celery</div>
+                            <div class="item"><i class="fas fa-check"></i> Lemons</div>
+                        </div>
+                    </div>
+                    <div class="box-actions">
+                        <a class="btn btn-primary" href="#contact">Order Now</a>
+                        <a class="btn btn-secondary" href="#contact">Customize</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bundle Options Section -->
+<section class="bundle-options" id="bundle-options">
+    <div class="container">
+        <div class="section-header">
+            <h2>Special Bundle Options</h2>
+            <p>Curated selections for different lifestyles and family needs</p>
+        </div>
+        <div class="bundles-grid">
+            <!-- Family Bundle -->
+            <div class="bundle-card">
+                <span class="bundle-badge">Best Value</span>
+                <div class="bundle-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3>Family Essentials Bundle</h3>
+                <div class="bundle-price">$49.99 <span>/ week</span></div>
+                <p class="bundle-description">Perfect for families of 4-5, this bundle includes a generous selection of fruits and vegetables for all your weekly meals.</p>
+                <div class="bundle-features">
+                    <div class="bundle-feature"><i class="fas fa-check"></i> All items from Fruit & Vegetable Boxes</div>
+                    <div class="bundle-feature"><i class="fas fa-check"></i> Extra portion of staple items</div>
+                    <div class="bundle-feature"><i class="fas fa-check"></i> 2 bonus seasonal items</div>
+                    <div class="bundle-feature"><i class="fas fa-check"></i> Free recipe cards included</div>
+                </div>
+                <div class="bundle-actions">
+                    <a class="btn btn-primary" href="#contact">Select Family Bundle</a>
+                </div>
+            </div>
+            
+            <!-- Healthy Living Bundle -->
+            <div class="bundle-card">
+                <div class="bundle-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Healthy Living Bundle</h3>
+                <div class="bundle-price">$39.99 <span>/ week</span></div>
+                <p class="bundle-description">Designed for health-conscious individuals, featuring antioxidant-rich fruits and nutrient-dense vegetables.</p>
+                <div class="bundle-features">
+                    <div class="bundle-feature"><i class="fas fa-check"></i> Extra leafy greens & berries</div>
+                    <div class="bundle-feature"><i class="fas fa-check"></i> Superfood additions</div>
+                    <div class="bundle-feature"><i class="fas fa-check"></i> Low-glycemic fruits</div>
+                    <div class="bundle-feature"><i class="fas fa-check"></i> Nutrition guide included</div>
+                </div>
+                <div class="bundle-actions">
+                    <a class="btn btn-primary" href="#contact">Select Healthy Bundle</a>
+                </div>
+            </div>
+            
+            <!-- Chef's Selection Bundle -->
+            <div class="bundle-card">
+                <div class="bundle-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3>Chef's Selection Bundle</h3>
+                <div class="bundle-price">$59.99 <span>/ week</span></div>
+                <p class="bundle-description">For food enthusiasts and home chefs who appreciate premium ingredients and culinary variety.</p>
+                <div class="bundle-features">
+                    <div class="bundle-feature"><i class="fas fa-check"></i> Premium & exotic varieties</div>
+                    <div class="bundle-feature"><i class="fas fa-check"></i> Herb selection included</div>
+                    <div class="bundle-feature"><i class="fas fa-check"></i> Specialty mushrooms</div>
+                    <div class="bundle-feature"><i class="fas fa-check"></i> Chef-inspired recipes</div>
+                </div>
+                <div class="bundle-actions">
+                    <a class="btn btn-primary" href="#contact">Select Chef's Bundle</a>
                 </div>
             </div>
         </div>
@@ -1670,7 +2152,7 @@
                     </div>
                 </div>
                 <div class="review-text">
-                    Hakimi Fresh has been our primary produce supplier for over a year. The quality is consistently excellent, and their daily delivery ensures our ingredients are always fresh. Our customers notice the difference!
+                    Hakimi Fresh Produce has been our primary produce supplier for over a year. The quality is consistently excellent, and their daily delivery ensures our ingredients are always fresh. Our customers notice the difference!
                 </div>
             </div>
             <div class="review-card">
@@ -1691,7 +2173,7 @@
                     </div>
                 </div>
                 <div class="review-text">
-                    The organic fruits from Hakimi Fresh have transformed our menu. Our smoothies and salads taste so much better with their premium ingredients. The delivery is always on time, and the produce arrives in perfect condition.
+                    The organic fruits from Hakimi Fresh Produce have transformed our menu. Our smoothies and salads taste so much better with their premium ingredients. The delivery is always on time, and the produce arrives in perfect condition.
                 </div>
             </div>
             <div class="review-card">
@@ -1712,7 +2194,7 @@
                     </div>
                 </div>
                 <div class="review-text">
-                    We've tried several suppliers, but Hakimi Fresh stands out for their consistent quality and reliable service. Our customers appreciate the fresh, vibrant produce, and we appreciate the competitive pricing.
+                    We've tried several suppliers, but Hakimi Fresh Produce stands out for their consistent quality and reliable service. Our customers appreciate the fresh, vibrant produce, and we appreciate the competitive pricing.
                 </div>
             </div>
         </div>
@@ -1789,7 +2271,7 @@
 <section class="cta-section">
     <div class="container cta-content">
         <h2>Ready to Elevate Your Menu?</h2>
-        <p>Contact Hakimi Fresh today for premium quality fruits and vegetables. Fast delivery across Toronto.</p>
+        <p>Contact Hakimi Fresh Produce today for premium quality fruits and vegetables. Fast delivery across Toronto.</p>
         <div class="cta-buttons">
             <a class="btn" href="#contact">Get Quote</a>
             <a class="btn btn-secondary" href="tel:+16475944549">Call Now</a>
@@ -1806,17 +2288,17 @@
                     <div class="logo-img">
                         <i class="fas fa-leaf" style="color: var(--primary-green); font-size: 1.2rem;"></i>
                     </div>
-                    <h3>Hakimi Fresh</h3>
+                    <h3>Hakimi Fresh Produce</h3>
                 </div>
                 <p>Premium wholesale fresh fruits and vegetables in Toronto. Supplying stores, restaurants, and cafés with fast daily delivery.</p>
                 <div class="social-links">
-                    <a class="social-link" href="#">
+                    <a class="social-link" href="https://facebook.com/hakimiproduce" aria-label="Facebook">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a class="social-link" href="#">
+                    <a class="social-link" href="https://instagram.com/hakimiproduce" aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a class="social-link" href="#">
+                    <a class="social-link" href="https://twitter.com/hakimiproduce" aria-label="Twitter">
                         <i class="fab fa-twitter"></i>
                     </a>
                 </div>
@@ -1827,6 +2309,8 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#products">Products</a></li>
+                    <li><a href="#weekly-boxes">Weekly Boxes</a></li>
+                    <li><a href="#bundle-options">Bundles</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#reviews">Reviews</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -1837,10 +2321,11 @@
                 <p><span class="icon"><i class="fas fa-phone"></i></span> +1 (647) 594-4549</p>
                 <p><span class="icon"><i class="fas fa-envelope"></i></span> hambahumbu@gmail.com</p>
                 <p><span class="icon"><i class="fas fa-map-marker-alt"></i></span> Serving Greater Toronto Area</p>
+                <p><span class="icon"><i class="fas fa-globe"></i></span> hakimiproduce.com</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2023 Hakimi Fresh. All rights reserved.</p>
+            <p>© 2023 Hakimi Fresh Produce. All rights reserved. | Website: hakimiproduce.com</p>
         </div>
     </div>
 </footer>
