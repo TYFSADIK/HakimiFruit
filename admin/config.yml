@@ -1,0 +1,63 @@
+backend:
+  name: github
+  repo: your-username/your-repo-name # Replace with your actual GitHub repo
+  branch: main # or your default branch
+
+# Media files will be stored in the repo under static/images/uploads
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+# Editorial Workflow (optional - for draft/publish states)
+publish_mode: editorial_workflow
+
+collections:
+  # Products Collection
+  - name: "products"
+    label: "Products"
+    folder: "content/products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Category", name: "category", widget: "select", options: ["fresh-fruits", "fresh-vegetables", "organic-fruits", "organic-vegetables"]}
+      - {label: "Price", name: "price", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Featured", name: "featured", widget: "boolean", default: false}
+      - {label: "In Stock", name: "inStock", widget: "boolean", default: true}
+
+  # Weekly Boxes Collection
+  - name: "weekly_boxes"
+    label: "Weekly Boxes"
+    folder: "content/weekly-boxes"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Price", name: "price", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Badge Text", name: "badge", widget: "string", required: false}
+      - label: "Items"
+        name: "items"
+        widget: "list"
+        fields:
+          - {label: "Item Name", name: "name", widget: "string"}
+
+  # Bundle Options Collection
+  - name: "bundles"
+    label: "Bundles"
+    folder: "content/bundles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Price", name: "price", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Badge", name: "badge", widget: "string", required: false}
+      - {label: "Icon", name: "icon", widget: "select", options: ["home", "heart", "utensils"]}
+      - label: "Features"
+        name: "features"
+        widget: "list"
+        fields:
+          - {label: "Feature", name: "feature", widget: "string"}
